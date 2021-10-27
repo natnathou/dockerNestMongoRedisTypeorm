@@ -22,14 +22,6 @@ let config = {
     database: process.env.MONGO_DATABASE,
     useUnifiedTopology: true,
     useNewUrlParser:true,
-    cache: {
-        type: 'redis',
-        options: {
-            host: process.env.REDISHOST,
-            port: parseInt(process.env.REDISPORT),
-        },
-        duration: 60000,
-    },
 };
 
 switch (process.env.NODE_ENV) {
