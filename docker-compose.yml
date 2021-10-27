@@ -41,7 +41,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_DATABASE=project
+      - MONGODB_ROOT_PASSWORD=admin
     volumes:
       - ./database:/data/db
+      - ./db_init:/docker-entrypoint-initdb.d
 
